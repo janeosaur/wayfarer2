@@ -18,6 +18,8 @@ class PostForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
     console.log(`new post title: ${this.state.title} and text: ${this.state.text}`)
+    let user = window.Myvars.uid
+    let name = window.Myvars.displayName || 'anonymous'
     let title = this.state.title.trim();
     let text = this.state.text.trim();
     let date = Date.now();
@@ -25,7 +27,7 @@ class PostForm extends Component {
       return;
     }
     console.log("the text lenght is: ", (text).length);
-    this.props.onPostSubmit({title: title, text: text, date:date, city: this.props.cityName})
+    this.props.onPostSubmit({user: user, name: name, title: title, text: text, date:date, city: this.props.cityName})
     this.setState({title: '', text: ''})
 
     this.setState({ showModal: false})  // this removes form when click button

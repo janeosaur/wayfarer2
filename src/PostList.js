@@ -8,8 +8,8 @@ class PostList extends Component {
        <PostIndiv
           key={post._id}
           title={post.title}
-          cityName={this.props.cityName}
-          name={ post.name }
+          name={post.name}
+          user={post.user}
           text={post.text}
           uniqueID={post._id}
           date={post.date}

@@ -82,7 +82,6 @@ class PostBox extends Component {
                 cityName={this.props.cityName} />
               <PostList
                 data={this.state.data}
-                cityName={this.props.cityName}
                 onPostDelete={this.handlePostDelete}
                 onPostUpdate={this.handlePostUpdate}/>
             </Col>

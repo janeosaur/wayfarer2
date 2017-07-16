@@ -43,7 +43,7 @@ class Cities extends Component {
       )
     });
     return (
-      <div className="cityPage">
+      <div id="citiesPage" class="page">
         <Grid>
           <Row>
             <Col sm={10} smOffset={1}>

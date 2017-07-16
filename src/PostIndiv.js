@@ -10,6 +10,7 @@ class PostIndiv extends Component {
     super(props);
     this.state={
       // name: '', we are no longer allowing users to change name
+      user: this.props.user,
       text: this.props.text,
       title: this.props.title,
       toBeUpdated: false,
@@ -26,6 +27,7 @@ class PostIndiv extends Component {
   handleTitleChange(e) {
     this.setState({ title: e.target.value });
   }
+
   handleTextChange(e) {
     this.setState({ text: e.target.value });
   }
@@ -104,17 +106,27 @@ class PostIndiv extends Component {
       return Math.floor((difference) /60 ) + " minutes";
     }
     else {
-      return "Just seconds";  //  Client wants this nomiclature for seconds
+      return "Just seconds";
     }
   }
 
+  sessionButton() {
+    if (this.props.user === window.Myvars.uid) {
+      return (
+        <div>
+          <a className="myButton" id="close" onClick={ this.updatePost }> Edit </a> <span id="or"> </span>
+          <a className="myButton" id="close" onClick={ this.deletePost }> Delete </a>
+        </div>  
+      )
+    }
+  }
 
   render() {
     return (
       <div>
         <Row className="show-grid post">
           <Col className="userimage" sm={12} md={3}>
-            <img id="userimage" src="http://rosupport.com/demo2/assets/images/gotm.jpg" alt=""/>
+            <img id="userimage" src={window.Myvars.photoURL} alt=""/>
 
           </Col>
           <Col className="userinfo" sm={12} md={8}>
@@ -125,13 +137,13 @@ class PostIndiv extends Component {
               <br/><div className="userpost truncate moreless" id="arsh"> <Link to={`/comments/${this.props.uniqueID}`}>{this.props.text} </Link></div>
             </a>
             <br/> <br/>
-            <a className="myButton" id="close" onClick={ this.updatePost }> Edit </a> <span id="or"> </span>
-            <a className="myButton" id="close" onClick={ this.deletePost }> Delete </a>
           </Col>
           <Col className="userinfo" sm={12} md={1}>
             <div className="dateposted">Posted: {this.timePassed(this.props.date)} ago</div>
           </Col>
         </Row>
+
+        {this.sessionButton()}
 
           <Row className="show-grid-buttons">
 

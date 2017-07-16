@@ -24,7 +24,6 @@ function destroy(req, res) {
 function update(req, res) {
   db.Comment.findById(req.params.id, function(error, comment) {
     if (error) { res.send(error) };
-    (req.body.name) ? comment.name = req.body.name : null;
     (req.body.title) ? comment.title = req.body.title : null;
     (req.body.text) ? comment.text = req.body.text : null;
     (req.body.date) ? comment.date = req.body.date : null;
@@ -38,6 +37,7 @@ function update(req, res) {
 function create(req, res) {
   var comment = new db.Comment();
   comment.name = req.body.name;
+  comment.user = req.body.user;
   comment.title = req.body.title;
   comment.text = req.body.text;
   comment.city = req.body.city;
@@ -52,7 +52,7 @@ function create(req, res) {
 }
 
 function showUser(req, res) {
-  db.Comment.find({name: req.params.name}, function(error, comments) {
+  db.Comment.find({user: req.params.id}, function(error, comments) {
     if (error) { res.send (error) };
     res.json(comments);
   });

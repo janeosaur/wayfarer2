@@ -41,16 +41,6 @@ img.city {
   margin-top: 18px;
 }*/
 
-h2#cityname {
-  position: absolute;
-  right: 20px;
-  top: 300px;
-  z-index: 3;
-  color: white;
-  font-size: 80px;
-  font-weight: boler
-}
-
 #arsh {
   white-space: pre-wrap;
 }
@@ -631,22 +621,19 @@ div.explore a:hover {
   color: black
 }
 
-/*Cities Page*/
-div.cityPage {
-  margin-top: 100px;
+/*Applies to all Pages*/
+.page {
+  margin-top: 80px;
 }
 
-div.cityImage {
+/*Cities Page*/
+#citiesPage .cityImage {
   margin: 20px 0;
   position: relative;
   overflow: hidden;
 }
 
-div.cityImage img {
-  transition: all 1s ease;
-}
-
-div.cityImage h1 {
+#citiesPage .cityImage h1 {
   position: absolute;
   text-align: center;
   font-weight: 800;
@@ -657,6 +644,28 @@ div.cityImage h1 {
   text-shadow: 2px 2px 2px #000;
 }
 
-div.cityImage:hover h1 {
+#citiesPage .cityImage:hover h1 {
   color: #88d9ff;
+}
+
+/* city page */
+#cityPage .banner {
+  position: relative;
+  overflow: hidden;
+}
+
+#cityPage img {
+  width: 100%;
+}
+
+#cityPage h1 {
+  position: absolute;
+  text-align: center;
+  font-weight: 800;
+  font-size: 50px;
+  bottom: 5%;
+  right: 5%;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+  z-index: 2;
 }

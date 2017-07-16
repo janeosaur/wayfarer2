@@ -17,7 +17,7 @@ class UserPostBox extends Component {
   loadPostsFromServer() {
     $.ajax ({
       method: 'GET',
-      url: 'http://localhost:3001/api/profile/comments/Sejin%20P.' // ${currentUser.uid?}
+      url: `http://localhost:3001/api/profile/comments/${window.Myvars.uid}`
     })
     .then(res => {
       this.setState({data: res})

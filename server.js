@@ -44,7 +44,7 @@ app.post('/api/comments', controllers.comments.create);
 app.get('/api/comments/:id', controllers.comments.show);
 app.delete('/api/comments/:id', controllers.comments.destroy);
 app.put('/api/comments/:id', controllers.comments.update);
-app.get('/api/profile/comments/:name', controllers.comments.showUser);
+app.get('/api/profile/comments/:id', controllers.comments.showUser);
 app.get('/api/cities', controllers.cities.index);
 app.get('/api/cities/:name', controllers.cities.show);
 
