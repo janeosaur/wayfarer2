@@ -41,9 +41,6 @@ img.city {
   margin-top: 18px;
 }*/
 
-#arsh {
-  white-space: pre-wrap;
-}
 
 /*Styling for Navbar*/
 ul {
@@ -219,36 +216,6 @@ h3.explore a:hover {
   margin-right: 5px;
 }*/
 
-div.post {
-  text-align: left;
-  position: relative
-}
-
-img.userimage {
-  display: block;
-  margin-left: 20px;
-}
-
-span#username {
-  font-weight: bolder;
-  font-size: 20px;
-  margin-left: 20px;
-}
-
-h5.usertitle {
-  overflow-wrap: break-word;
-}
-
-div.userpost {
-  margin-left: 20px;
-  overflow-wrap: break-word;
-}
-
-div.dateposted {
-  position: absolute;
-  top: 0;
-  right: 0
-}
 
 span#or {
   font-weight: bolder;
@@ -267,15 +234,6 @@ div.post-form {
 
 form.form {
   margin-top: 10px;
-}
-
-/*.cities-hover:hover .cities-text {
-  opacity: 1;
-  display: block;
-}*/
-
-.cities-hover {
-  /*display: inline-block;*/
 }
 
 .cities-hover img {
@@ -663,9 +621,55 @@ div.explore a:hover {
   text-align: center;
   font-weight: 800;
   font-size: 50px;
-  bottom: 5%;
+  top: 20%;
   right: 5%;
   color: #fff;
   text-shadow: 2px 2px 2px #000;
   z-index: 2;
+}
+
+#postBox {
+
+}
+
+/*Post Indiv*/
+#postIndiv {
+  text-align: left;
+  padding: 25px;
+  margin: 10px 0;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 6px 6px -6px #777;
+  background-color: #f4f4f4;
+}
+
+#postIndiv p {
+  padding: 0;
+}
+
+#postIndiv img {
+  height: 50px;
+  width: 50px;
+}
+
+#postIndiv span {
+  padding-left: 10px;
+}
+
+#postIndiv .title {
+  font-weight: 700;
+  font-style: italic;
+  text-transform: full-width;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+#arsh {
+  padding-left: 20px!important;
+  white-space: pre-wrap;
+}
+
+#postIndiv .right {
+  text-align: right;
 }

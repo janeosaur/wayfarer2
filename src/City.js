@@ -31,13 +31,12 @@ class City extends Component {
         <div className="banner">
           <img src={this.state.data.image} alt="city"/>
           <h1>{this.state.data.name}</h1>
-        </div>
-
-        <PostBox
-          url={`http://localhost:3001/api/cities/${this.props.params.name}`}
-          pollInterval={2000}
-          cityName={this.state.data.name}
-          data={this.state.data} />
+      </div>
+      <PostBox
+        url={`http://localhost:3001/api/cities/${this.props.params.name}`}
+        pollInterval={2000}
+        cityName={this.state.data.name}
+        data={this.state.data} />
       </div>
     );
   }

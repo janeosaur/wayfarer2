@@ -121,20 +121,17 @@ class PostIndiv extends Component {
 
   render() {
     return (
-      <div>
-        <Row className="show-grid post">
-          <Col className="userimage" sm={12} md={3}>
-            <img id="userimage" src={this.props.image} alt=""/>
-
+      <div id="postIndiv">
+        <Row >
+          <Col className="" sm={8}>
+            <p className="title">{this.props.title}</p>
+            <p className="userpost truncate moreless" id="arsh">{this.props.text}</p>
+            <p><Link to={`/comments/${this.props.uniqueID}`}>Read More...</Link></p>
           </Col>
-          <Col className="userinfo" sm={12} md={8}>
-            <h5 className="usertitle">Title: {this.props.title}</h5>
-            <span id="username">{this.props.name}</span> says:
-            <br/><div className="userpost truncate moreless" id="arsh"> <Link to={`/comments/${this.props.uniqueID}`}>{this.props.text} </Link></div>
-            <br/> <br/>
-          </Col>
-          <Col className="userinfo" sm={12} md={1}>
-            <div className="dateposted">Posted: {this.timePassed(this.props.date)} ago</div>
+          <Col className="right" sm={4}>
+            <img id="" src={this.props.image} alt=""/>
+            <span id="">{this.props.name}</span>
+            <p className="dateposted">{this.timePassed(this.props.date)} ago</p>
           </Col>
         </Row>
 
@@ -171,10 +168,8 @@ class PostIndiv extends Component {
 
                   </form>)
                 : null}
-
           </Row>
 
-        <hr/>
         <div> {
           (this.state.showDialog) &&
           <ReactConfirmAlert

@@ -73,10 +73,10 @@ class PostBox extends Component {
 
   render() {
     return (
-      <div>
+      <div id="postBox">
         <Grid>
           <Row className="post-box">
-            <Col sm={12} md={8} mdOffset={2}><br/>
+            <Col xs={10} lg={8} lgOffset={2} xsOffset={1} ><br/>
               <PostForm
                 onPostSubmit={this.handlePostSubmit}
                 cityName={this.props.cityName} />
