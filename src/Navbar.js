@@ -63,9 +63,3 @@ class Navbar extends Component {
 }
 
 export default Navbar;
-
-
-// Next steps:
-// 1. can we have <a> Cities </a> link to Cities page? and also
-// on hover, have it display all the cities?
-// 2. can we have mouse cursor appear when hovered on log in and log out?

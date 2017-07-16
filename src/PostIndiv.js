@@ -40,7 +40,7 @@ class PostIndiv extends Component {
     let id = this.props.uniqueID;
     let title = (this.state.title) ? this.state.title : null;
     let text = (this.state.text) ? this.state.text : null;
-    let date = Date.now(); // edit this into seconds, mins, hours, etc
+    let date = Date.now();
     let post = { title:title, text: text, date:date};
     this.props.onPostUpdate(id, post);
     this.setState({
@@ -109,11 +109,16 @@ class PostIndiv extends Component {
   }
 
   sessionButton() {
+    // see if signed in user is same as post originator
     if (this.props.user === window.Myvars.uid) {
       return (
-        <div>
-          <a className="myButton" id="close" onClick={ this.updatePost }> Edit </a> <span id="or"> </span>
-          <a className="myButton" id="close" onClick={ this.deletePost }> Delete </a>
+        <div className="buttons">
+          <a className="myButton" id="close" onClick={ this.updatePost }>
+            <span className="glyphicon glyphicon-pencil"></span>
+          </a>
+          <a className="myButton" id="close" onClick={ this.deletePost }>
+            <span className="glyphicon glyphicon-trash"></span>
+          </a>
         </div>
       )
     }
@@ -123,26 +128,22 @@ class PostIndiv extends Component {
     return (
       <div id="postIndiv">
         <Row >
-          <Col className="" sm={8}>
-            <p className="title">{this.props.title}</p>
-            <p className="userpost truncate moreless" id="arsh">{this.props.text}</p>
-            <p><Link to={`/comments/${this.props.uniqueID}`}>Read More...</Link></p>
+          <Col className="" xs={9}>
+            <p className="title"><Link to={`/comments/${this.props.uniqueID}`}>{this.props.title}</Link></p>
+            <p className="userpost" id="arsh">{this.props.text}</p>
           </Col>
-          <Col className="right" sm={4}>
+          <Col className="right" xs={3}>
+            <span id="name">{this.props.name}</span>
             <img id="" src={this.props.image} alt=""/>
-            <span id="">{this.props.name}</span>
             <p className="dateposted">{this.timePassed(this.props.date)} ago</p>
+            {this.sessionButton()}
           </Col>
         </Row>
-
-        {this.sessionButton()}
-
-          <Row className="show-grid-buttons">
-
-              { (this.state.toBeUpdated)
-                ? (<form onSubmit={ this.handlePostUpdate }>
-
-                    <label className="col-md-2 col-sm-3 col-xs-4 control-label" for="title" >Title</label>
+        <Row>
+          <Col xs={10} xsOffset={1}>
+            { (this.state.toBeUpdated) ?
+              (<form onSubmit={ this.handlePostUpdate }>
+                    <label for="title">Title</label>
                     <textarea
                       id="title"
                       className="form-control input-lg"
@@ -150,8 +151,8 @@ class PostIndiv extends Component {
                       type='text'
                       placeholder={ this.state.title }
                       value={ this.state.title }
-                      onChange={ this.handleTitleChange }></textarea><span>
-                    <label className="col-md-2 col-sm-3 col-xs-4 control-label" for="textarea1">Text</label>
+                      onChange={ this.handleTitleChange }></textarea>
+                    <label for="textarea1">Text</label>
                     <textarea
                       id="textarea1"
                       className="form-control input-lg"
@@ -159,16 +160,17 @@ class PostIndiv extends Component {
                       type='text'
                       placeholder={ this.props.text }
                       value={ this.state.text }
-                      onChange={ this.handleTextChange }></textarea> </span> <span>
+                      onChange={ this.handleTextChange }></textarea>
                     <input
                       className="myButton"
                       id="open"
                       type='submit'
-                      value='Update' /> </span>
-
-                  </form>)
-                : null}
-          </Row>
+                      value='Update'></input>
+                    <a onClick={() => this.setState({toBeUpdated: false})} className="myButton" id="close">Cancel</a>
+                </form>
+            ) : null }
+          </Col>
+        </Row>
 
         <div> {
           (this.state.showDialog) &&
@@ -188,5 +190,4 @@ class PostIndiv extends Component {
 
 export default PostIndiv;
 
-// on delete -> cancel & submit, error: index.js:44 Uncaught TypeError: Cannot read property 'parentNode' of null
-// how to incorporate ${this.props.name} in the delete confirmation modal message?
+// className="form-control input-lg" allows form to prefill the current title/text

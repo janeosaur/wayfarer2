@@ -76,8 +76,7 @@ class PostForm extends Component {
                 type='submit'
                 value='Submit Post'
                 />
-              <span> </span>
-              <a className="myButtonCancel" onClick={() => this.setState({ showModal: false})}> Cancel </a>
+              <a className="myButton" onClick={() => this.setState({ showModal: false})}> Cancel </a>
             </form>)
           : null}
       </div>
