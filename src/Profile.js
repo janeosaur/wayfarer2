@@ -20,8 +20,7 @@ class Profile extends Component {
                   <p className="profile-name"> {window.Myvars.displayName} </p>
                 </Col>
                 <Col sm={12} md={7} mdOffset={1}>
-                  <UserPostBox
-                    pollInterval={2000}/>
+                  <UserPostBox/>
                 </Col>
               </Row>
             </Col>
