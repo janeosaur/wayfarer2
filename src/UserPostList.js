@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import $ from 'jquery-ajax'
-import {Row, Col} from 'react-bootstrap'
+// import $ from 'jquery-ajax'
+// import {Row, Col} from 'react-bootstrap'
 import UserPosts from './UserPosts'
 
 class UserPostList extends Component {

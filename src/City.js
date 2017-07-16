@@ -11,32 +11,33 @@ class City extends Component {
     this.loadCityFromServer = this.loadCityFromServer.bind(this);
   }
   loadCityFromServer() {
+    console.log(this.props)
     $.ajax ({
       method: 'GET',
-      url: 'http://localhost:3001/api/cities/' + this.props.params.name// + api/cities req.params.id
+      url: 'http://localhost:3001/api/cities/' + this.props.params.name // + api/cities req.params.id
     })
     .then(res => {
       this.setState({data: res});
       console.log('data is ', this.state.data)
     })
   }
+
   componentDidMount() {
     this.loadCityFromServer();
   }
 
+
   render() {
     var cityName = this.state.data.name
     var cityImage = this.state.data.image
-    // console.log({cityName})
-    // console.log('props are', this.props.currentUser)
     return (
       <div>
+        {this.state.data.name}
         <h2 id="cityname">{cityName}</h2>
         <img className="city" src={cityImage} alt="sf-city"/>
         <PostBox
-          url={`http://localhost:3001/api/cities/${this.props.params.name}`}
+          url={`http://localhost:3001/api/cities/${this.props.params.id}`}
           pollInterval={2000}
-          currentUser={this.props.currentUser}
           cityName={cityName}
           data={this.state.data} />
       </div>

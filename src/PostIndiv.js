@@ -114,7 +114,7 @@ class PostIndiv extends Component {
       <div>
         <Row className="show-grid post">
           <Col className="userimage" sm={12} md={3}>
-            <img id="userimage" src="http://rosupport.com/demo2/assets/images/gotm.jpg"/>
+            <img id="userimage" src="http://rosupport.com/demo2/assets/images/gotm.jpg" alt=""/>
 
           </Col>
           <Col className="userinfo" sm={12} md={8}>

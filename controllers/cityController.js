@@ -10,7 +10,7 @@ function index(req, res) {
 }
 
 function show(req, res) {
-  db.City.findById(req.params.id)
+  db.City.find({name: req.params.name})
   .populate('comments')
   .exec(function(error, city) {
     if (error) { res.send(error) };

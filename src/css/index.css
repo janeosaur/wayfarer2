@@ -630,3 +630,33 @@ button.explore {
 div.explore a:hover {
   color: black
 }
+
+/*Cities Page*/
+div.cityPage {
+  margin-top: 100px;
+}
+
+div.cityImage {
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+div.cityImage img {
+  transition: all 1s ease;
+}
+
+div.cityImage h1 {
+  position: absolute;
+  text-align: center;
+  font-weight: 800;
+  font-size: 50px;
+  bottom: 5%;
+  right: 5%;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+}
+
+div.cityImage:hover h1 {
+  color: #88d9ff;
+}

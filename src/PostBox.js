@@ -30,7 +30,7 @@ class PostBox extends Component {
   }
 
   handlePostSubmit(post) {
-    let posts = this.state.data;
+    // let posts = this.state.data;
     console.log('incoming new post is', post, 'city is', post.city)
     $.ajax({
       method: 'POST',
@@ -79,11 +79,9 @@ class PostBox extends Component {
             <Col sm={12} md={8} mdOffset={2}><br/>
               <PostForm
                 onPostSubmit={this.handlePostSubmit}
-                cityName={this.props.cityName}
-                currentUser={this.props.currentUser}/>
+                cityName={this.props.cityName} />
               <PostList
                 data={this.state.data}
-                currentUser={this.props.currentUser}
                 cityName={this.props.cityName}
                 onPostDelete={this.handlePostDelete}
                 onPostUpdate={this.handlePostUpdate}/>

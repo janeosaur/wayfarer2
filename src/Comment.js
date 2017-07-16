@@ -73,7 +73,7 @@ class Comments extends Component {
       <Grid>
         <Row className="one-comment">
           <Col sm={12} md={8} mdOffset={2}>
-            <img id="share" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-share-128.png"/>
+            <img id="share" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-share-128.png" alt=""/>
             <div id="comment-title">{this.state.data.title}</div>
             <hr/>
             <div className="comment-box">

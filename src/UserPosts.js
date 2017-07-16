@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import $ from 'jquery-ajax'
-import {Grid, Row, Col} from 'react-bootstrap'
+import {Row, Col} from 'react-bootstrap'
 import {Link} from 'react-router'
 import ReactConfirmAlert from 'react-confirm-alert'
 
@@ -115,7 +115,6 @@ class UserPosts extends Component {
 
 
   render() {
-    // console.log('look jane', this.props)
     return (
       <div className="user-post-container">
         <Row className="show-grid post">

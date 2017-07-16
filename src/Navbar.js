@@ -18,8 +18,13 @@ class Navbar extends Component {
 
  sessionButton() {
     if (!this.props.currentUser ) {
-      return (<li className="navtext"><a id="login" onClick={this.props.loginButtonClicked}> <span class="glyphicon glyphicon-log-in"></span>Log In</a></li>);
+      return (<li className="navtext"><a id="login" onClick={this.props.loginButtonClicked}> <span className="glyphicon glyphicon-log-in"></span>Log In</a></li>);
     } else {
+      window.Myvars = {
+        photoURL: this.props.currentUser.photoURL,
+        displayName: this.props.currentUser.displayName,
+        uid: this.props.currentUser.uid
+      }
       return (
         <li className="navtext">
           <div className="dropdown">
@@ -28,7 +33,7 @@ class Navbar extends Component {
             <span className="caret"></span> </a>
             <ul className="dropdown-content">
               <li> <a href="/profile">View Profile</a></li>
-              <li> <a id="logout" onClick={this.props.logoutButtonClicked}> <span class="glyphicon glyphicon-log-out"></span>Log Out</a></li>
+              <li> <a id="logout" onClick={this.props.logoutButtonClicked}> <span className="glyphicon glyphicon-log-out"></span>Log Out</a></li>
             </ul>
           </div>
         </li>

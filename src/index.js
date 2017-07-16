@@ -5,10 +5,9 @@ import Home from './Home'
 import Cities from './Cities'
 import City from './City'
 import Layout from './Layout'
-import Profile from './Profile'
-import Comments from './Comment'
-import $ from 'jquery'
-import './index.css'
+import Profile from './Profile.js'
+import Comments from './Comment.js'
+import './css/index.css'
 
 ReactDOM.render(
   <Router history={browserHistory}>

@@ -4,49 +4,34 @@ function index(req,res) {
     description: 'Below are the available endpoints',
     endpoint: [
       {
-        method: 'GET',
         path: '/api',
-        description: 'shows this & all avaliable routes as JSON :)'
+        method: 'GET',
+        description: 'shows this & all available routes as JSON :)'
       },
       {
+        path: '/api/comments',
         method: 'GET',
+        description: 'shows all comments as JSON'
+      },
+      {
+        path: '/api/comments/:id',
+        method: 'GET',
+        description: 'shows a comment as JSON'
+      },
+      {
         path: '/api/cities',
-        description: 'shows all city as JSON'
-      },
-      {
         method: 'GET',
-        path: '/api/posts',
-        description: 'shows all posts as JSON'
+        description: 'shows all cities as JSON'
       },
       {
+        path: '/api/cities/:id',
         method: 'GET',
-        path: '/api/cities/:cityId',
-        description: 'shows a specific city as JSON'
+        description: 'shows a city as JSON'
       },
       {
+        path: '/profile/comments/:name',
         method: 'GET',
-        path: '/api/cities/:cityId/posts/',
-        description: 'shows all posts within a specific city as JSON'
-      },
-      {
-        method: 'GET',
-        path: '/api/cities/:cityId/posts/:postId',
-        description: 'shows a specific post within a specific city JSON'
-      },
-      {
-        method: 'POST',
-        path: '/api/cities/:cityId/posts/:postId',
-        description: 'creates a specifc post in a specific city'
-      },
-      {
-        method: 'PUT',
-        path: '/api/cities/:cityId/posts/:postId',
-        description: 'updates a specific post in a specific city'
-      },
-      {
-        method: 'DELETE',
-        path: '/api/cities/:cityId/posts/:postId',
-        description: 'deletes a specific post in a specfic city'
+        description: 'shows comments created by a user'
       }
     ]
   });
