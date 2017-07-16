@@ -9,8 +9,6 @@ class PostIndiv extends Component {
   constructor(props) {
     super(props);
     this.state={
-      // name: '', we are no longer allowing users to change name
-      user: this.props.user,
       text: this.props.text,
       title: this.props.title,
       toBeUpdated: false,
@@ -116,7 +114,7 @@ class PostIndiv extends Component {
         <div>
           <a className="myButton" id="close" onClick={ this.updatePost }> Edit </a> <span id="or"> </span>
           <a className="myButton" id="close" onClick={ this.deletePost }> Delete </a>
-        </div>  
+        </div>
       )
     }
   }
@@ -126,16 +124,13 @@ class PostIndiv extends Component {
       <div>
         <Row className="show-grid post">
           <Col className="userimage" sm={12} md={3}>
-            <img id="userimage" src={window.Myvars.photoURL} alt=""/>
+            <img id="userimage" src={this.props.image} alt=""/>
 
           </Col>
           <Col className="userinfo" sm={12} md={8}>
-            <a href="
-            cities/comment/">
-              <h5 className="usertitle">Title: {this.props.title}</h5>
-              <span id="username">{this.props.name}</span> says:
-              <br/><div className="userpost truncate moreless" id="arsh"> <Link to={`/comments/${this.props.uniqueID}`}>{this.props.text} </Link></div>
-            </a>
+            <h5 className="usertitle">Title: {this.props.title}</h5>
+            <span id="username">{this.props.name}</span> says:
+            <br/><div className="userpost truncate moreless" id="arsh"> <Link to={`/comments/${this.props.uniqueID}`}>{this.props.text} </Link></div>
             <br/> <br/>
           </Col>
           <Col className="userinfo" sm={12} md={1}>

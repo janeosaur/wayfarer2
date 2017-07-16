@@ -4,8 +4,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var CommentsSchema = new Schema({
-  name: String, // this needs to tie into google user id instead...
+  name: String,
   user: String,
+  image: String,
   text: String,
   date: String,
   title: String,

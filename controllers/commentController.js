@@ -38,6 +38,7 @@ function create(req, res) {
   var comment = new db.Comment();
   comment.name = req.body.name;
   comment.user = req.body.user;
+  comment.image = req.body.image;
   comment.title = req.body.title;
   comment.text = req.body.text;
   comment.city = req.body.city;

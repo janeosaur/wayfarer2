@@ -17,18 +17,28 @@ class PostForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(`new post title: ${this.state.title} and text: ${this.state.text}`)
-    let user = window.Myvars.uid
-    let name = window.Myvars.displayName || 'anonymous'
+    // console.log(`new post title: ${this.state.title} and text: ${this.state.text}`)
+    let user = window.Myvars.uid;
+    let name = window.Myvars.displayName;
+    let image = window.Myvars.image;
     let title = this.state.title.trim();
     let text = this.state.text.trim();
     let date = Date.now();
     if (!text || !title) {
+      alert('Please enter both fields');
       return;
     }
-    console.log("the text lenght is: ", (text).length);
-    this.props.onPostSubmit({user: user, name: name, title: title, text: text, date:date, city: this.props.cityName})
-    this.setState({title: '', text: ''})
+    this.props.onPostSubmit(
+      {
+        user: user,
+        name: name,
+        image: image,
+        title: title,
+        text: text,
+        date:date,
+        city: this.props.cityName
+      });
+    this.setState({title: '', text: ''});
 
     this.setState({ showModal: false})  // this removes form when click button
   }
@@ -43,7 +53,6 @@ class PostForm extends Component {
 
   onClose(){
     this.setState({ showModal: false });
-    // this.refs.form.getDOMNode().reset();
   }
 
   render() {

@@ -23,7 +23,8 @@ class Navbar extends Component {
       window.Myvars = {
         photoURL: this.props.currentUser.photoURL,
         displayName: this.props.currentUser.displayName,
-        uid: this.props.currentUser.uid
+        uid: this.props.currentUser.uid,
+        image: this.props.currentUser.photoURL
       }
       return (
         <li className="navtext">

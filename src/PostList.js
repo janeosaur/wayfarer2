@@ -10,6 +10,7 @@ class PostList extends Component {
           title={post.title}
           name={post.name}
           user={post.user}
+          image={post.image}
           text={post.text}
           uniqueID={post._id}
           date={post.date}
