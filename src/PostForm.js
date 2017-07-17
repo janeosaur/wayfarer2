@@ -13,6 +13,7 @@ class PostForm extends Component {
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.closeForm = this.closeForm.bind(this);
+    this.openForm = this.openForm.bind(this);
   }
 
   handleSubmit(e) {
@@ -23,10 +24,7 @@ class PostForm extends Component {
     let title = this.state.title.trim();
     let text = this.state.text.trim();
     let date = Date.now();
-    if (!window.Myvars.uid) {
-      alert('You must be logged in to post');
-      return;
-    } else if (!text || !title) {
+    if (!text || !title) {
       alert('Please enter both fields');
       return;
     }
@@ -44,14 +42,22 @@ class PostForm extends Component {
     this.setState({ title: e.target.value });
   }
 
-  closeForm(){
+  closeForm() {
     this.setState({ showForm: false });
+  }
+
+  openForm() {
+    if (!window.Myvars.uid) {
+      alert('You must be logged in to post');
+      return;
+    }
+    this.setState({ showForm: true });
   }
 
   render() {
     return (
       <div className="post-form">
-        <button type="button" className="myButton" onClick={() => this.setState({ showForm: true})}> Add A Post </button>
+        <button type="button" className="myButton" onClick={this.openForm}> Add A Post </button>
         { (this.state.showForm)
           ? (<form className="form" onSubmit={ this.handleSubmit }>
               <textarea

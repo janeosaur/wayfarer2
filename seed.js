@@ -75,7 +75,7 @@ commentsList.push({
 commentsList.push({
   name: 'Ariana Latte',
   text: 'London is a destination that you can continue to come back to again and again and continue to enjoy its delights.',
-  date: '1494380293369',
+  date: '1499840293369',
   user: '314124',
   title: 'First time in London',
   city: 'London',
@@ -84,7 +84,7 @@ commentsList.push({
 commentsList.push({
   name: 'Paul White',
   text: "London has gone from a food wasteland to a foodie's delight. Be sure to sample its international cuisines, including the explosion in fresh, local British cooking.",
-  date: '1494380293369',
+  date: '1500200293369',
   user: '311',
   title: 'Food Here is Amazing',
   city: 'London',
@@ -103,7 +103,7 @@ commentsList.push({
 commentsList.push({
   name: 'Good Boy',
   text: 'London is a great place to see the sights, and there are lots of places to pee!',
-  date: '149438223369',
+  date: '1500000223369',
   user: '3',
   title: 'My favorite things to do in London',
   city: 'London',
@@ -111,8 +111,8 @@ commentsList.push({
 });
 commentsList.push({
   name: 'Sejin Park',
-  text: 'Gibraltar is most famous for The Rock of Gibraltar, a 426 meter high limestone rock rising out of the sea. The rock can be seen for many miles. It is home to the Barbary Apes, a type of tail-less monkey which are the only wild monkeys in Europe.',
-  date: '1494380080369',
+  text: 'Gibraltar is most famous for The Rock of Gibraltar, a 426 meter high limestone rock rising out of the sea. The rock can be seen for many miles. Definitely a must-see. You will run into many Barbary Apes, a type of tail-less monkey which are the only wild monkeys in Europe.',
+  date: '1499980080369',
   user: '21111',
   title: 'Rock of Gibraltar',
   city: "Gibraltar",

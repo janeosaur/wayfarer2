@@ -282,6 +282,10 @@ p#cities-adventure {
   padding: 0;
 }
 
+#postIndiv .userpost {
+  padding-left: 15px;
+}
+
 #postIndiv .right {
   text-align: right;
 }

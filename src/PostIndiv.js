@@ -128,7 +128,7 @@ class PostIndiv extends Component {
         <Row >
           <Col className="" xs={12} sm={8}>
             <p className="title">{this.props.title}</p>
-            <p className="userpost" id="arsh">{this.props.text}</p>
+            <p className="userpost">{this.props.text}</p>
           </Col>
           <Col className="right" sm={4}>
             <span id="name">{this.props.name}</span>
