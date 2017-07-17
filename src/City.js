@@ -17,7 +17,7 @@ class City extends Component {
     })
     .then(res => {
       this.setState({data: res});
-      console.log('data is ', res)
+      // console.log('data is ', res)
     })
   }
 
@@ -43,6 +43,3 @@ class City extends Component {
 }
 
 export default City;
-
-
-//component will mount in/near ajax call for city

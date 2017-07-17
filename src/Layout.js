@@ -62,11 +62,3 @@ class Layout extends Component {
  }
 
 export default Layout;
-
-//{currentUser: this.state.currentUser}
-
-
-//   {this.props.children}
-// https://jaketrent.com/post/send-props-to-children-react/
-// http://stackoverflow.com/questions/38403321/pass-this-state-with-this-props-children
-//https://github.com/ReactTraining/react-router/issues/1531

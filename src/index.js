@@ -2,11 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, browserHistory, Route, IndexRoute} from 'react-router'
 import Home from './Home'
-import Cities from './Cities'
 import City from './City'
 import Layout from './Layout'
 import Profile from './Profile.js'
-import Comments from './Comment.js'
 import './css/index.css'
 
 ReactDOM.render(
@@ -14,10 +12,7 @@ ReactDOM.render(
     <Route path='/' component={Layout}>
       <IndexRoute component={Home} />
       <Route path='/profile' component={Profile} />
-      <Route path='/cities/comment/:id' component={Comments} />
-      <Route path='/cities' component={Cities} />
       <Route path='/cities/:name' component={City} />
-      <Route path='/comments/:id' component={Comments}/>
     </Route>
   </Router>,
 

@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
-import {Grid} from 'react-bootstrap'
 
 class Footer extends Component {
   render() {
     return (
-      <Grid>
-        <hr />
-        <footer id="footer">
-          <p>© Wayfarer by J-SKM 2017</p>
-        </footer>
-      </Grid>
+      <footer>
+        <ul className="pull-left">
+          <li>Share travel stories! Don't see a city? Drop us a line and we'll add it!</li>
+        </ul>
+        <ul className="pull-right">
+          <li>© Wayfarer by J-SKM 2017</li>
+        </ul>
+      </footer>
     );
   }
 }

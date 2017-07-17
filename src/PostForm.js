@@ -7,40 +7,34 @@ class PostForm extends Component {
       title: '',
       text: '',
       date: '',
-      showModal: false,
+      showForm: false,
     };
     this.handleTitleChange = this.handleTitleChange.bind(this);
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.onClose = this.onClose.bind(this);
+    this.closeForm = this.closeForm.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    // console.log(`new post title: ${this.state.title} and text: ${this.state.text}`)
-    let user = window.Myvars.uid;
-    let name = window.Myvars.displayName;
-    let image = window.Myvars.image;
-    let title = this.state.title.trim();
-    let text = this.state.text.trim();
-    let date = Date.now();
-    if (!text || !title) {
+    if (!window.Myvars.uid) {
+      alert('You must be logged in to post');
+      return;
+    } else if (!text || !title) {
       alert('Please enter both fields');
       return;
     }
+    // console.log(`new post title: ${this.state.title} and text: ${this.state.text}`)
+    let user = window.Myvars.uid; // grabs logged in user's uid
+    let name = window.Myvars.displayName; // grabs logged in user's display name
+    let image = window.Myvars.image; // grabs logged in user's image
+    let title = this.state.title.trim();
+    let text = this.state.text.trim();
+    let date = Date.now();
     this.props.onPostSubmit(
-      {
-        user: user,
-        name: name,
-        image: image,
-        title: title,
-        text: text,
-        date:date,
-        city: this.props.cityName
-      });
+      { user: user, name: name, image: image, title: title, text: text, date:date, city: this.props.cityName });
     this.setState({title: '', text: ''});
-
-    this.setState({ showModal: false})  // this removes form when click button
+    this.setState({ showForm: false})
   }
 
   handleTextChange(e) {
@@ -51,23 +45,25 @@ class PostForm extends Component {
     this.setState({ title: e.target.value });
   }
 
-  onClose(){
-    this.setState({ showModal: false });
+  closeForm(){
+    this.setState({ showForm: false });
   }
 
   render() {
     return (
       <div className="post-form">
-        <button type="button" className="btn btn-outline-success" onClick={() => this.setState({ showModal: true})}> Add New Post </button>
-        { (this.state.showModal)
+        <button type="button" className="myButton" onClick={() => this.setState({ showForm: true})}> Add A Post </button>
+        { (this.state.showForm)
           ? (<form className="form" onSubmit={ this.handleSubmit }>
-              <input
+              <textarea
                 type='text'
                 placeholder='Title'
                 value={ this.state.name }
                 onChange={ this.handleTitleChange } />
-              <input
+              <textarea
                 type='text'
+                rows='5'
+                className="form-control"
                 placeholder='Text'
                 value={ this.state.text }
                 onChange={ this.handleTextChange } />
@@ -76,7 +72,7 @@ class PostForm extends Component {
                 type='submit'
                 value='Submit Post'
                 />
-              <a className="myButton" onClick={() => this.setState({ showModal: false})}> Cancel </a>
+              <a className="myButton" onClick={this.closeForm}> Cancel </a>
             </form>)
           : null}
       </div>
