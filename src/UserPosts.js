@@ -129,7 +129,6 @@ class UserPosts extends Component {
           <Col sm={12} md={10} mdOffset={1}>
             <br/>
             <div className="userpost truncate moreless">{this.props.text}</div>
-            <div className="readmore"><Link to={`/comments/${this.props.uniqueID}`}>Read More... </Link></div>
             <br/>
             <br/>
           </Col>

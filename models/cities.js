@@ -10,6 +10,7 @@ var CitySchema = new Schema({
   description: String,
   country: String,
   image: String,
+  image2: String,
   comments: [{
     type: Schema.Types.ObjectId,
     ref: 'Comment'

@@ -1,15 +1,21 @@
 import React, { Component } from 'react'
+import {Grid, Row, Col} from 'react-bootstrap'
 
 class Footer extends Component {
   render() {
     return (
       <footer>
-        <ul className="pull-left">
-          <li>Share travel stories! Don't see a city? Drop us a line and we'll add it!</li>
-        </ul>
-        <ul className="pull-right">
-          <li>© Wayfarer by J-SKM 2017</li>
-        </ul>
+        <Grid>
+          <Row>
+            <Col md={5}>
+              <h4>About Us:</h4>
+              <p>Do you love to travel? We do too! Help other travellers by sharing your reviews and tips on your favorite destinations.</p>
+            </Col>
+          </Row>
+          <div className="pull-right">
+            <p>A GA project refactored by <a href="http://janeosaur.me"> JW, 2017</a></p>
+          </div>
+        </Grid>
       </footer>
     );
   }

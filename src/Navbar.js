@@ -27,37 +27,35 @@ class Navbar extends Component {
         image: this.props.currentUser.photoURL
       }
       return (
-        <li className="navtext">
-          <div className="dropdown">
-            <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <img className="navbar-profile-pic" src={ this.props.currentUser.photoURL } alt="" height="43" /> { this.props.currentUser.displayName }
-            <span className="caret"></span> </a>
-            <ul className="dropdown-content">
-              <li> <a href="/profile">View Profile</a></li>
-              <li> <a id="logout" onClick={this.props.logoutButtonClicked}> <span className="glyphicon glyphicon-log-out"></span>Log Out</a></li>
-            </ul>
+        <div className="dropdown pull-right">
+          <div className="dropbtn name">
+            {this.props.currentUser.displayName }<span className="caret"></span>
           </div>
-        </li>
+          <ul className="dropdown-content">
+            <li><a href="/profile">View Profile</a></li>
+            <li><a id="logout" onClick={this.props.logoutButtonClicked}>Log Out</a></li>
+          </ul>
+        </div>
       )
     }
   }
 
  render() {
     return (
-      <ul className="navbar">
-        <li id="nav-wayfarer"><a id="wayfarer" href="/"><strong>Wayfarer</strong></a></li>
-        {this.sessionButton()}
-        <div className="dropdown">
-        <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-        <li className="navtext"><a id="cities" href="/cities" title="Cities">Cities </a><span className="caret"></span> </li>
-        </a>
-        <ul className="dropdown-content">
-          <li> <a href="/cities/San%20Francisco">San Francisco</a></li>
-          <li> <a href="/cities/London">London</a></li>
-          <li> <a href="/cities/Gibraltar">Gibraltar</a></li>
+      <nav>
+        <ul>
+          <h1><a href="/">WAYFARER</a></h1>
+          {this.sessionButton()}
+          <li className="dropdown pull-right">
+            <div className="dropbtn cities">Cities <span className="caret"></span></div>
+            <ul className="dropdown-content">
+              <a href="/cities/San%20Francisco">San Francisco</a>
+              <a href="/cities/London">London</a>
+              <a href="/cities/Gibraltar">Gibraltar</a>
+            </ul>
+          </li>
         </ul>
-        </div>
-      </ul>
+      </nav>
     );
   }
 }
