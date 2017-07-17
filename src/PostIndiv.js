@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router'
 import {Row, Col} from 'react-bootstrap'
 import ReactConfirmAlert from 'react-confirm-alert'
 import 'react-confirm-alert/src/react-confirm-alert.css'
-// import marked from 'marked' - do we need this? (MERN crud lab used this rawMarkup)
 
 class PostIndiv extends Component {
   constructor(props) {
@@ -128,11 +126,11 @@ class PostIndiv extends Component {
     return (
       <div id="postIndiv">
         <Row >
-          <Col className="" xs={9}>
-            <p className="title"><Link to={`/comments/${this.props.uniqueID}`}>{this.props.title}</Link></p>
+          <Col className="" xs={12} sm={8}>
+            <p className="title">{this.props.title}</p>
             <p className="userpost" id="arsh">{this.props.text}</p>
           </Col>
-          <Col className="right" xs={3}>
+          <Col className="right" sm={4}>
             <span id="name">{this.props.name}</span>
             <img id="" src={this.props.image} alt=""/>
             <p className="dateposted">{this.timePassed(this.props.date)} ago</p>

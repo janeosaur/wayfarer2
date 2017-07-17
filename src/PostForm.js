@@ -17,6 +17,12 @@ class PostForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    let user = window.Myvars.uid; // grabs logged in user's uid
+    let name = window.Myvars.displayName; // grabs logged in user's display name
+    let image = window.Myvars.image; // grabs logged in user's image
+    let title = this.state.title.trim();
+    let text = this.state.text.trim();
+    let date = Date.now();
     if (!window.Myvars.uid) {
       alert('You must be logged in to post');
       return;
@@ -24,13 +30,6 @@ class PostForm extends Component {
       alert('Please enter both fields');
       return;
     }
-    // console.log(`new post title: ${this.state.title} and text: ${this.state.text}`)
-    let user = window.Myvars.uid; // grabs logged in user's uid
-    let name = window.Myvars.displayName; // grabs logged in user's display name
-    let image = window.Myvars.image; // grabs logged in user's image
-    let title = this.state.title.trim();
-    let text = this.state.text.trim();
-    let date = Date.now();
     this.props.onPostSubmit(
       { user: user, name: name, image: image, title: title, text: text, date:date, city: this.props.cityName });
     this.setState({title: '', text: ''});

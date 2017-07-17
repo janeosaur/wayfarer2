@@ -18,7 +18,7 @@ class Navbar extends Component {
 
  sessionButton() {
     if (!this.props.currentUser ) {
-      return (<li className="navtext"><a id="login" onClick={this.props.loginButtonClicked}> <span className="glyphicon glyphicon-log-in"></span>Log In</a></li>);
+      return (<li className="dropdown dropbtn pull-right name"><a id="login" onClick={this.props.loginButtonClicked}> Log In</a></li>);
     } else {
       window.Myvars = {
         photoURL: this.props.currentUser.photoURL,

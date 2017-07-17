@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-// import $ from 'jquery-ajax'
 import {Row, Col} from 'react-bootstrap'
-import {Link} from 'react-router'
 import ReactConfirmAlert from 'react-confirm-alert'
 
 class UserPosts extends Component {

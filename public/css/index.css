@@ -29,7 +29,7 @@ a, a:hover, a:visited, a:focus {
 
 /*Applies to all Pages*/
 .page {
-  padding-top: 80px;
+  padding: 40px 0;
 }
 
 /*Home Page*/
@@ -67,6 +67,10 @@ nav h1 a {
   padding: 5px 12px;
   width: 120px;
   text-align: right;
+}
+
+nav .name {
+  margin-right: 10px;
 }
 
 .dropbtn span {
@@ -170,7 +174,7 @@ img.profile-image {
   margin-top: 30px
 }
 
-p.user-post, city {
+p.user-post, .city {
   margin-top: 10px;
   padding: 0px;
   padding-right: 10px;
@@ -247,7 +251,7 @@ p#cities-adventure {
   overflow: hidden;
   text-align: left;
   padding: 25px;
-  margin: 10px 0;
+  margin: 30px 0;
   background-color: #f4f4f4;
   -webkit-box-shadow: 0 10px 6px -6px #777;
      -moz-box-shadow: 0 10px 6px -6px #777;
@@ -260,13 +264,13 @@ p#cities-adventure {
 }
 
 #postIndiv img {
-  height: 25px;
-  width: 25px;
-  vertical-align: baseline;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
 }
 
 #postIndiv span#name {
-  padding-right: 10px;
+  padding-right: 4px;
 }
 
 #postIndiv .title {
@@ -287,7 +291,7 @@ p#cities-adventure {
 }
 
 @media screen and (max-width: 600px) {
-  #postIndiv .dateposted, #postIndiv img {
+  #postIndiv .right {
     display: none;
   }
   nav h1 a {

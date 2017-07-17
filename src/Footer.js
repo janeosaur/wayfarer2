@@ -13,7 +13,7 @@ class Footer extends Component {
             </Col>
           </Row>
           <div className="pull-right">
-            <p>A GA project refactored by <a href="http://janeosaur.me"> JW, 2017</a></p>
+            <p>A GA project refactored by <a href="http://janeosaur.me"> JW</a>, 2017</p>
           </div>
         </Grid>
       </footer>
