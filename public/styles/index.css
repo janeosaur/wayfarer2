@@ -318,6 +318,11 @@ img.profile-image {
   margin-left: -1200px;
 }
 
+.parallax__layer__text {
+  transform: translateZ(-220px) scale(2);
+  top: 10%;
+}
+
 .parallax__layer__2 {
   transform: translateZ(-200px) scale(3);
   top: 24%;
