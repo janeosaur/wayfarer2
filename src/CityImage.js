@@ -7,8 +7,8 @@ class CityImage extends Component {
     return (
       <div className="cityImage">
         <Link to={`/cities/${this.props.name}`}>
-          <h1>{this.props.name}</h1> 
-          <img className="cities-panel" src={this.props.image} alt={"citiesImage"} height="100%" width="100%"/>
+          <h1>{this.props.name}</h1>
+          <img className="cities-panel" src={this.props.image} alt=""/>
         </Link>
       </div>
     )

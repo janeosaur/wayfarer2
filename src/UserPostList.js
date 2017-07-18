@@ -19,7 +19,6 @@ class UserPostList extends Component {
       })
       return (
         <div className="">
-          <h3 className="">Your most recent posts...</h3>
           {postNodes}
         </div>
       )

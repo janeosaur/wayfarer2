@@ -34,7 +34,7 @@ class PostBox extends Component {
     console.log('incoming new post is', post, 'city is', post.city)
     $.ajax({
       method: 'POST',
-      url: 'http://localhost:3001/api/comments/',
+      url: 'https://wayfarer2-api.herokuapp.com/api/comments',
       data: post
     })
     .then((res) => {
@@ -49,7 +49,7 @@ class PostBox extends Component {
   handlePostDelete(id) {
     $.ajax({
       method: 'delete',
-      url: `http://localhost:3001/api/comments/${id}`
+      url: `https://wayfarer2-api.herokuapp.com/api/comments/${id}`
     })
     .then( (res) => {
       console.log('post deleted!')
@@ -61,7 +61,7 @@ class PostBox extends Component {
   handlePostUpdate(id, post) {
     $.ajax({
       method: 'put',
-      url: `http://localhost:3001/api/comments/${id}`,
+      url: `https://wayfarer2-api.herokuapp.com/api/comments/${id}`,
       data: post
     })
     .then( (res) => {
