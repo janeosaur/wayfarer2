@@ -3,6 +3,10 @@ body {
   text-align: center;
 }
 
+.orange2 {
+  color: #ef754e;
+}
+
 footer {
   background-color: #2d112b;
   text-align: center;
@@ -22,7 +26,7 @@ footer a {
 
 form textarea, .form-control {
   padding: 10px;
-  background-color: #fff;
+  background-color: #fff!important;
 }
 
 a, a:hover, a:visited, a:focus {
@@ -162,8 +166,12 @@ img.profile-image {
 
 /*Cities Page*/
 #citiesPage {
-  background-color: #fdc;
-  padding: 50px 0;
+  background-color: #fef9ed;
+  padding: 30px 0 50px 0;
+}
+
+#citiesPage h1 {
+  font-weight: 900;
 }
 
 .cityImage {
@@ -275,6 +283,12 @@ img.profile-image {
   }
 }
 
+@media screen and (max-width: 1080px) {
+  .parallax__layer__text {
+    display: none;
+  }
+}
+
 .home {
   background-color: #fcd8c3;
 }
@@ -288,7 +302,6 @@ img.profile-image {
   left: 0%;
   right: 0;
   bottom: 0;
-  /*margin-left: -900px;*/
 }
 
 .parallax__layer{
@@ -320,7 +333,7 @@ img.profile-image {
 
 .parallax__layer__text {
   transform: translateZ(-220px) scale(2);
-  top: 10%;
+  top: 2%;
 }
 
 .parallax__layer__2 {
@@ -374,43 +387,48 @@ img.profile-image {
   color: #fff;
 }
 
-.home-bottom h1 a {
-  margin: 0 auto;
-  width: 250px;
-  padding: 20px 50px;
-  border: 2px solid #ef754e;
-  color: #fff;
-  transition: 1s ease all;
-  font-weight: 900;
-  letter-spacing: 2px;
-}
-
-.home-bottom h1 a:hover {
-  background-color: #ef754e;
-  color: #000;
-  border: 2px solid #000;
-}
-
 .about {
   margin: 0 auto;
   padding: 240px 0;
   width: 50%;
 }
 
-.about p {
-  padding-top: 150px;
-  font-size: 20px;
-}
-
-.about h1 {
+.home-bottom h1 {
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 3px;
   font-weight: 800;
-  font-size: 60px;
+  font-size: 40px;
   padding-bottom: 50px;
 }
 
-.orange2 {
-  color: #ef754e;
+.about h1 a {
+  margin: 0 auto;
+  width: 250px;
+  padding: 15px 40px;
+  border: 2px solid #ef754e;
+  color: #fff;
+  transition: 0.7s ease all;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.about h1 a:hover {
+  background-color: #ef754e;
+  border: 2px solid #000;
+  padding: 15px 55px;
+}
+
+.welcome {
+  margin-top: 140px;
+  padding: 0 50px;
+}
+
+.show-grid {
+  margin-top: 20px;
+}
+
+.show-grid .each h3{
+  border-bottom: 2px solid #ef754e;
+  padding-bottom: 20px;
 }

@@ -43,7 +43,8 @@ class Cities extends Component {
         <Grid>
           <Row>
             <Col xs={8} xsOffset={2}>
-                {cityNodes}
+              <h1 className="orange2">Our Favorite Cities</h1>
+              {cityNodes}
             </Col>
           </Row>
         </Grid>

@@ -33,27 +33,26 @@ class Home extends Component {
           </div>
           <div className="parallax__cover"></div>
           <div className="home-bottom">
-            <div className="about">
-              <h1>Welcome to <span className="orange2"> Wayfarer</span></h1>
-              <p>Explore and share stories and reviews about destinations from all over the world.</p>
-            </div>
             <Grid>
+              <Row className="welcome">
+                <div className="about">
+                  <h1><a href="/cities">EXPLORE</a></h1>
+                </div>
+                <h1>Welcome to <br/><span className="orange2"> Wayfarer</span></h1>
+                <h3>Explore and share stories and reviews about destinations from all over the world.</h3>
+              </Row>
               <Row className="show-grid">
-                <Col sm={12} md={2} mdOffset={3}><br/><h3>Locate Fav City</h3>
-
-                  <p>Find your favorite city in our crowdsource.</p>
+                <Col xs={10} md={4} mdOffset={0} xsOffset={1}>
+                  <div className="each"><h3>Travel Inspiration</h3></div>
                 </Col>
-                <Col sm={12} md={2}><br/><h3>Spot the Reviews</h3>
-
-                  <p>Remember a time during the last vacation that was memorable? Post it here!</p>
+                <Col xs={10} md={4} mdOffset={0} xsOffset={1}>
+                  <div className="each"><h3>Learn From Our Community</h3></div>
                 </Col>
-                <Col sm={12} md={2}><br/><h3>Share Your Favs!</h3>
-
-                  <p>Blog about your favorite places!</p>
+                <Col xs={10} md={4} mdOffset={0} xsOffset={1}>
+                  <div className="each"><h3>Share Your Travel Stories!</h3></div>
                 </Col>
               </Row>
             </Grid>
-            <h1><a href="/cities">EXPLORE</a></h1>
           </div>
         </div>
       </div>

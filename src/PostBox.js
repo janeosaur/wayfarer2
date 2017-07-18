@@ -26,6 +26,7 @@ class PostBox extends Component {
 
   componentDidMount() {
     this.loadPostsFromServer();
+    setInterval(this.loadPostsFromServer, this.props.pollInterval)
   }
 
   handlePostSubmit(post) {
