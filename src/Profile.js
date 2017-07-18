@@ -6,7 +6,7 @@ class Profile extends Component {
 
   render() {
     return (
-      <div id="container-fluid">
+      <div className="container-fluid page" id="profile">
         <Grid>
           <Row className="profile-contents page">
             <Col xs={10} xsOffset={1}><br/>
