@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-// import $ from 'jquery-ajax'
-// import {Row, Col} from 'react-bootstrap'
 import UserPosts from './UserPosts'
 
 class UserPostList extends Component {
@@ -20,8 +18,8 @@ class UserPostList extends Component {
         )
       })
       return (
-        <div className="user-post-list">
-          <h3 className="user-post-header"> My most recent posts...</h3>
+        <div className="">
+          <h3 className="">Your most recent posts...</h3>
           {postNodes}
         </div>
       )

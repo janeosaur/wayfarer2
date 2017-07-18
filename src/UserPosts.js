@@ -6,7 +6,6 @@ class UserPosts extends Component {
   constructor(props) {
     super(props);
     this.state={
-      // name: '', we are no longer allowing users to change name
       text: '',
       title: '',
       city: '',
@@ -114,26 +113,15 @@ class UserPosts extends Component {
 
   render() {
     return (
-      <div className="user-post-container">
-        <Row className="show-grid post">
-          <Col sm={12} md={6}>
-            <h5 className="user-post title">{this.props.title}</h5>
+      <div className="" id="postIndiv">
+        <Row className="">
+          <Col className="" xs={12}>
+            <p className="title">{this.props.title}</p>
+            <p className="userpost">{this.props.text}</p>
           </Col>
-          <Col sm={12} md={6}>
-            <p className="user-post city">{this.props.city}</p>
-          </Col>
-        </Row>
-        <Row>
-          <Col sm={12} md={10} mdOffset={1}>
-            <br/>
-            <div className="userpost truncate moreless">{this.props.text}</div>
-            <br/>
-            <br/>
-          </Col>
-        </Row>
-        <Row>
-          <Col sm={12} md={4} mdOffset={7}>
-            <div className="dateposted">Posted {this.timePassed(this.props.date)} ago</div>
+          <Col xs={12} className="right">
+            <p>{this.props.city}</p>
+            <p className="dateposted">{this.timePassed(this.props.date)} ago</p>
           </Col>
         </Row>
 
@@ -158,8 +146,6 @@ class UserPosts extends Component {
                 : null}
             </Col>
           </Row>
-
-        <hr/>
         <div> {
           (this.state.showDialog) &&
           <ReactConfirmAlert

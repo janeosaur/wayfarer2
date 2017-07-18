@@ -49,7 +49,7 @@ class Layout extends Component {
      });
     // console.log('children in LAYOUT', children)
     return (
-     <div>
+     <div id="layout">
        <Navbar
          currentUser={ this.state.currentUser }
          loginButtonClicked={ this.loginButtonClicked }

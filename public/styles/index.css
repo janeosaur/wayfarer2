@@ -1,0 +1,400 @@
+body {
+  font-family: 'Open Sans';
+  text-align: center;
+}
+
+footer {
+  background-color: #2d112b;
+  text-align: center;
+  color: #fff;
+  padding: 15px 20px 10px 20px;
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px #ef754e solid;
+}
+
+footer a {
+  color: #ef754e!important
+}
+
+form textarea, .form-control {
+  padding: 10px;
+}
+
+a, a:hover, a:visited, a:focus {
+  text-decoration: none;
+  color: #000;
+}
+
+/*Applies to all Pages*/
+.page {
+  padding: 40px 0;
+}
+
+/*Navbar*/
+nav {
+  font-size: 15px;
+  box-shadow: none;
+  margin: 0;
+}
+
+nav #wayfarer {
+  float: left;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 20px;
+  margin: 0 0 20px 20px;
+  color: #ef754e;
+}
+
+.dropdown {
+  line-height: 15px;
+  position: relative;
+  display: inline-block;
+  text-align: right;
+}
+
+.dropbtn {
+  cursor: pointer;
+  padding: 5px 12px;
+  width: 120px;
+}
+
+nav .name {
+  margin-right: 10px;
+}
+
+.dropbtn span {
+  color: #ef754e;
+}
+
+.dropdown-content {
+  display: none;
+  padding-top: 5px;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 7px 10px;
+  transition: .3s background-color;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(239, 117, 75, 0.28);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  background-color: #fff;
+
+}
+
+form {
+  position: relative;
+}
+
+div.post-form {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+form.form {
+  margin-top: 10px;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+.myButton {
+  margin-right: 5px;
+  border-width: 2px;
+	cursor: pointer;
+	font-size: 12px;
+	padding: 7px 10px;
+  font-weight: 700;
+  text-align: center;
+	text-decoration:none;
+  background-color:#9eb8d3;
+  color: #000;
+  border-style: none;
+}
+
+.myButton:hover {
+  background-color: #c3e0ff;
+}
+
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+/*Profile Page */
+div.profile-contents {
+  margin: 80px 0;
+}
+
+p.profile-name {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+img.profile-image {
+  border-radius: 50%;
+}
+
+/*Cities Page*/
+.cityImage, #citiesPage {
+  padding: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#citiesPage .cityImage h1 {
+  position: absolute;
+  text-align: center;
+  font-weight: 800;
+  font-size: 50px;
+  bottom: 14%;
+  right: 5%;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+  transition: 1s all ease;
+}
+
+#citiesPage .cityImage:hover h1 {
+  color: #7faad8;
+  transform: scale(1.1)
+}
+
+/* city page */
+#cityPage .banner {
+  position: relative;
+  overflow: hidden;
+}
+
+#cityPage img {
+  width: 100%;
+}
+
+#cityPage .banner h1 {
+  position: absolute;
+  text-align: center;
+  font-weight: 800;
+  font-size: 50px;
+  top: 20%;
+  right: 5%;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+  z-index: 2;
+}
+
+#postBox {
+  background-color: #fff;
+  top: 500px;
+  width: 100%
+}
+
+/*Post Indiv*/
+#postIndiv {
+  overflow: hidden;
+  text-align: left;
+  padding: 25px;
+  margin: 30px 0;
+  background-color: #f4f4f4;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 6px 6px -6px #777;
+}
+
+#postIndiv p {
+  padding: 0;
+  margin: 0;
+}
+
+#postIndiv img {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+}
+
+#postIndiv span#name {
+  padding-right: 4px;
+}
+
+#postIndiv .title {
+  font-weight: 700;
+  font-style: italic;
+  text-transform: full-width;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+#postIndiv .userpost {
+  padding-left: 15px;
+}
+
+#postIndiv .right {
+  text-align: right;
+}
+
+#postIndiv .readmore, .dateposted {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  #postIndiv .right {
+    display: none;
+  }
+  nav h1 a {
+    font-size: 20px;
+  }
+}
+
+.home {
+  background-color: #fcd8c3;
+}
+
+.parallax {
+  perspective: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 50px;
+  left: 0%;
+  right: 0;
+  bottom: 0;
+  /*margin-left: -900px;*/
+}
+
+.parallax__layer{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax_layer img {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.parallax__layer__0 {
+  transform: translateZ(-300px) scale(4);
+  top: 10%;
+}
+
+.parallax__layer__1 {
+  transform: translateZ(-250px) scale(3.5);
+  /*top: 11%;*/
+  top: 20%;
+  margin-left: -1200px;
+}
+
+.parallax__layer__2 {
+  transform: translateZ(-200px) scale(3);
+  /*top: 14%;*/
+  top: 24%;
+  margin-left: -100px;
+}
+
+.parallax__layer__3 {
+  transform: translateZ(-150px) scale(2.5);
+  /*top: 10%;*/
+  top: 20%;
+  margin-left: -1200px;
+}
+
+.parallax__layer__4 {
+  transform: translateZ(-100px) scale(2);
+  /*top: 12%;*/
+  top: 22%;
+  margin-left: -750px;
+}
+
+.parallax__layer__5 {
+  transform: translateZ(-50px) scale(1.5);
+  /*top: 20%;*/
+  top: 30%;
+  margin-left: -500px;
+}
+
+.parallax__layer__6 {
+  transform: translateZ(0px) scale(1);
+  /*top: 6%;*/
+  top: 16%;
+  margin-left: -600px;
+}
+
+.parallax__cover {
+  background: #2D112B;
+  position: absolute;
+  top: 77%;
+  right: 0;
+  width: 100%;
+  height: 1400px;
+  z-index: 2;
+  padding-top: 90px;
+  color: #fff;
+}
+
+.home-bottom {
+  position: absolute;
+  width: 100%;
+  top: 70%;
+  text-align: center;
+  z-index: 2;
+  color: #fff;
+}
+
+.home-bottom h1 a {
+  margin: 0 auto;
+  width: 250px;
+  padding: 20px 50px;
+  border: 2px solid #ef754e;
+  color: #fff;
+  transition: 1.5s ease all;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.home-bottom h1 a:hover {
+  background-color: #ef754e;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.about {
+  margin: 0 auto;
+  padding: 240px 0;
+  width: 50%;
+}
+
+.about p {
+  padding-top: 150px;
+  font-size: 20px;
+}
+
+.about h1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  font-weight: 800;
+  font-size: 60px;
+  padding-bottom: 50px;
+}
+
+.orange2 {
+  color: #ef754e;
+}

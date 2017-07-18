@@ -126,11 +126,11 @@ class PostIndiv extends Component {
     return (
       <div id="postIndiv">
         <Row >
-          <Col className="" xs={12} sm={8}>
+          <Col className="" xs={12} >
             <p className="title">{this.props.title}</p>
             <p className="userpost">{this.props.text}</p>
           </Col>
-          <Col className="right" sm={4}>
+          <Col className="right" xs={12}>
             <span id="name">{this.props.name}</span>
             <img id="" src={this.props.image} alt=""/>
             <p className="dateposted">{this.timePassed(this.props.date)} ago</p>

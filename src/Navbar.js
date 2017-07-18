@@ -44,7 +44,7 @@ class Navbar extends Component {
     return (
       <nav>
         <ul>
-          <h1><a href="/">WAYFARER</a></h1>
+          <h1><a id="wayfarer" href="/">WAYFARER</a></h1>
           {this.sessionButton()}
           <li className="dropdown pull-right">
             <div className="dropbtn cities">Cities <span className="caret"></span></div>

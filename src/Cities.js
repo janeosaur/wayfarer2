@@ -42,7 +42,7 @@ class Cities extends Component {
       <div id="citiesPage" className="page">
         <Grid>
           <Row>
-            <Col xs={10} xsOffset={1}>
+            <Col xs={8} xsOffset={2}>
                 {cityNodes}
             </Col>
           </Row>

@@ -5,15 +5,13 @@ import $ from 'jquery-ajax'
 class City extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      data: []
-    };
+    this.state = { data: [] };
     this.loadCityFromServer = this.loadCityFromServer.bind(this);
   }
   loadCityFromServer() {
     $.ajax ({
       method: 'GET',
-      url: 'http://localhost:3001/api/cities/' + this.props.params.name // + api/cities req.params.id
+      url: 'http://localhost:3001/api/cities/' + this.props.params.name
     })
     .then(res => {
       this.setState({data: res});

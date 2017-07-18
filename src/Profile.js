@@ -3,23 +3,19 @@ import {Grid, Row, Col} from 'react-bootstrap'
 import UserPostBox from './UserPostBox'
 
 class Profile extends Component {
-  //
-  // constructor(props) {
-  //   super(props)
-  // }
 
   render() {
     return (
-      <div id="profile-container">
+      <div id="container-fluid">
         <Grid>
-          <Row className="profile-contents">
-            <Col sm={12} md={8} mdOffset={2}><br/>
+          <Row className="profile-contents page">
+            <Col xs={10} xsOffset={1}><br/>
               <Row>
-                <Col sm={12} md={4}>
+                <Col xs={12} sm={4}>
                   <img className="profile-image" src={window.Myvars.photoURL} alt="" height="200"/>
-                  <p className="profile-name"> {window.Myvars.displayName} </p>
+                  <p className="profile-name"> Hi, {window.Myvars.displayName}!</p>
                 </Col>
-                <Col sm={12} md={7} mdOffset={1}>
+                <Col xs={12} sm={7} smOffset={1}>
                   <UserPostBox/>
                 </Col>
               </Row>
