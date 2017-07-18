@@ -19,7 +19,7 @@ class Cities extends Component {
   loadCityFromServer() {
     $.ajax ({
       method: 'GET',
-      url: 'http://localhost:3001/api/cities/'
+      url: 'https://wayfarer2-api.herokuapp.com/api/cities'
     })
     .then(res => {
       this.setState({data: res});
