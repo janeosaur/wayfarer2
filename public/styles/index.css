@@ -162,7 +162,8 @@ img.profile-image {
 
 /*Cities Page*/
 #citiesPage {
-  background-color: #fdc
+  background-color: #fdc;
+  padding: 50px 0;
 }
 
 .cityImage {
@@ -269,7 +270,7 @@ img.profile-image {
   #postIndiv .right {
     display: none;
   }
-  nav h1 a {
+  nav #wayfarer {
     font-size: 20px;
   }
 }
@@ -313,42 +314,36 @@ img.profile-image {
 
 .parallax__layer__1 {
   transform: translateZ(-250px) scale(3.5);
-  /*top: 11%;*/
   top: 20%;
   margin-left: -1200px;
 }
 
 .parallax__layer__2 {
   transform: translateZ(-200px) scale(3);
-  /*top: 14%;*/
   top: 24%;
   margin-left: -100px;
 }
 
 .parallax__layer__3 {
   transform: translateZ(-150px) scale(2.5);
-  /*top: 10%;*/
   top: 20%;
   margin-left: -1200px;
 }
 
 .parallax__layer__4 {
   transform: translateZ(-100px) scale(2);
-  /*top: 12%;*/
   top: 22%;
   margin-left: -750px;
 }
 
 .parallax__layer__5 {
   transform: translateZ(-50px) scale(1.5);
-  /*top: 20%;*/
   top: 30%;
   margin-left: -500px;
 }
 
 .parallax__layer__6 {
   transform: translateZ(0px) scale(1);
-  /*top: 6%;*/
   top: 16%;
   margin-left: -600px;
 }
@@ -380,7 +375,7 @@ img.profile-image {
   padding: 20px 50px;
   border: 2px solid #ef754e;
   color: #fff;
-  transition: 1.5s ease all;
+  transition: 1s ease all;
   font-weight: 900;
   letter-spacing: 2px;
 }
