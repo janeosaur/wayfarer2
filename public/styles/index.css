@@ -180,6 +180,10 @@ img.profile-image {
   overflow: hidden;
 }
 
+.cityImage img {
+  width: 100%;
+}
+
 #citiesPage .cityImage h1 {
   position: absolute;
   text-align: center;
